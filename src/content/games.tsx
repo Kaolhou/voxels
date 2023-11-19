@@ -12,12 +12,12 @@ export default function Games() {
       }}
       id="games"
     >
-      <h1>Games</h1>
+      <h1 style={{ fontSize: "3.5em" }}>Games</h1>
       <LtrRtl
         content={[
           <article data-aos="slide-up">
-            <h2>Endless Chase</h2>
-            <p>
+            <h2 className="f_large">Endless Chase</h2>
+            <p className="f_medium">
               Endless Chase is a Sci-fi punk with time travel in Real Time RPG
               bringing a differentiated gameplay experience using 5 core loops
               strategically distributed in the 4 acts of the Kishotenketsu
@@ -40,8 +40,8 @@ export default function Games() {
       <LtrRtl
         content={[
           <article>
-            <h2>Endless Chase</h2>
-            <p>
+            <h2 className="f_larger">Endless Chase</h2>
+            <p className="f_medium">
               Endless Chase is a Sci-fi punk with time travel in Real Time RPG
               bringing a differentiated gameplay experience using 5 core loops
               strategically distributed in the 4 acts of the Kishotenketsu

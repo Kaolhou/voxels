@@ -2,17 +2,30 @@ import Header from "../components/header";
 import { FaPlayCircle } from "react-icons/fa";
 import { MdFullscreen, MdFullscreenExit } from "react-icons/md";
 import requestFullscreen from "../utils/requestFullscreen";
-import video_mp4 from "../../public/site/c68f78f1-ca27-4138-92a6-0d978c676fb9.mp4";
+// import video_mp4 from "../../public/site/c68f78f1-ca27-4138-92a6-0d978c676fb9.mp4";
 import { useEffect, useRef, useState } from "react";
 import About from "../content/about";
 import Games from "../content/games";
 import Footer from "../components/footer";
 import Authors from "../content/authors";
+import { videoUrls } from "../utils/videoUrls";
 
 export default function Main() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPaused, setIsPaused] = useState(true);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [video, setVideo] = useState<{
+    videos: string[];
+    currentIndex: number;
+    currentURL: string;
+  }>({ currentIndex: 0, videos: videoUrls, currentURL: videoUrls[0] });
+
+  const handleEnded = () =>
+    setVideo((prev) => ({
+      ...prev,
+      currentIndex: (prev.currentIndex + 1) % prev.videos.length,
+      currentURL: prev.videos[(prev.currentIndex + 1) % prev.videos.length],
+    }));
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -69,16 +82,20 @@ export default function Main() {
           onClick={playPause}
           preload="auto"
           onEnded={() => {
-            window.scrollTo({
-              behavior: "smooth",
-              top: document.getElementById("about")?.offsetTop,
-            });
+            if (video.currentIndex == 4) {
+              window.scrollTo({
+                behavior: "smooth",
+                top: document.getElementById("about")?.offsetTop,
+              });
+              return;
+            }
+            handleEnded();
+            videoRef.current?.play();
           }}
-          onChange={console.log}
           ref={videoRef}
           // muted
         >
-          <source src={video_mp4} />
+          <source src={video.currentURL} />
         </video>
         <span
           style={{
@@ -136,8 +153,6 @@ export default function Main() {
       <Games />
       <Authors />
       <Footer />
-      {/* <Container background={teste} content={<About />} paddingTop={100} /> */}
-      {/* <Carrousel images={autoImport()} /> */}
     </main>
   );
 }

@@ -37,14 +37,21 @@ body {
   -webkit-user-select: none;
 }
 
+.f_larger {
+  font-size: 2.5rem;
+}
+
 .f_large {
-  font-size: 1.3em;
+  font-size: 2rem;
 }
 .f_small {
-  font-size: 1em;
+  font-size: 1.3rem;
+}
+.f_smaller {
+  font-size: 1rem;
 }
 .f_medium {
-  font-size: 1.2em;
+  font-size: 1.5rem;
 }
 
 .link_list::after {
@@ -174,22 +181,28 @@ body {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 200px;
+  min-width: 100px;
+  flex: 1 1 0;
 }
 
 .card > picture {
   background-color: #52525b;
   display: flex;
+  max-width: 15em;
   justify-content: center;
   align-items: center;
-  width: 30;
   overflow: hidden;
   border-radius: 50%;
   aspect-ratio: 1/1;
+  margin: 2em auto;
 }
 .card > picture > img {
   width: 100%;
 }
-
+@media screen and (max-width: 1560px) {
+  html {
+    font-size: 12px;
+  }
+}
 @media screen and (max-width: 750px) {
 }

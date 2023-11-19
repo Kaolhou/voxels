@@ -11,20 +11,20 @@ export default function About() {
       }}
       id="about"
     >
-      <h1>About</h1>
+      <h1 className="f_large">About</h1>
       <LtrRtl
         content={[
           <>
-            <p>
+            <p className="f_medium">
               From an early age, games have been our main form of entertainment.
               We love them so much that we decided to create our own and share
               our joy with other gamers.
             </p>
-            <p>
+            <p className="f_medium">
               Our products are the result of our experience playing a variety of
               styles, seeking to bring out the best in our experiences.
             </p>
-            <p>
+            <p className="f_medium">
               Our contagious dream became a reality and our own families
               believed and invested, helping us to produce the Demo of our first
               game.
