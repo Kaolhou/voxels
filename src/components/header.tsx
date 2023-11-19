@@ -63,10 +63,30 @@ export default function Header() {
           }}
           className="list-child"
         >
-          <LinkList content="Home" url="#home" />
-          <LinkList content="About" url="#about" />
-          <LinkList content="Games" url="#games" />
-          <LinkList content="Press Kit" url="/public/PRESS_KIT_VOXELS.zip" />
+          <LinkList
+            content="Home"
+            url="#home"
+            className={"f_medium"}
+            bold={true}
+          />
+          <LinkList
+            content="About"
+            url="#about"
+            className={"f_medium"}
+            bold={true}
+          />
+          <LinkList
+            content="Games"
+            url="#games"
+            className={"f_medium"}
+            bold={true}
+          />
+          <LinkList
+            className={"f_medium"}
+            content="Press Kit"
+            url="/public/PRESS_KIT_VOXELS.zip"
+            bold={true}
+          />
         </ul>
       </main>
       <ScrollToTop isTop={isTop} />

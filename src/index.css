@@ -36,6 +36,17 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
 }
+
+.f_large {
+  font-size: 1.3em;
+}
+.f_small {
+  font-size: 1em;
+}
+.f_medium {
+  font-size: 1.2em;
+}
+
 .link_list::after {
   background-color: #0284c7;
   width: 100%;
@@ -70,6 +81,9 @@ body {
   height: var(--largura-botao-lr);
   border-radius: 50%;
   z-index: 10;
+}
+.bold {
+  font-weight: bold;
 }
 /* .carrousel > .arrow_left > svg,
 .carrousel > .arrow_right >svg{

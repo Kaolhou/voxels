@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import About from "../content/about";
 import Games from "../content/games";
 import Footer from "../components/footer";
-import Authors from "../content/Authors";
+import Authors from "../content/authors";
 
 export default function Main() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -67,6 +67,7 @@ export default function Main() {
           className="youtube-video"
           autoPlay={true}
           onClick={playPause}
+          preload="auto"
           onEnded={() => {
             window.scrollTo({
               behavior: "smooth",
