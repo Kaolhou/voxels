@@ -1,6 +1,7 @@
 import Card from "../components/card";
 import ghoff from "../../public/persons/hoffmann.jpg";
-import rafarossi from "../../public/persons/flavio.jpg";
+import rafarossi from "../../public/persons/1697203944607.jpg";
+import flavio from "../../public/persons/flavio.jpg";
 export default function Authors() {
   return (
     <section
@@ -28,7 +29,7 @@ export default function Authors() {
       <Card
         email="flavioerr@voxels3dstudio.page"
         name="Flavio Ribeiro"
-        photo={rafarossi}
+        photo={flavio}
       />
     </section>
   );
