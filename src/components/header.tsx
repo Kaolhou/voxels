@@ -52,8 +52,8 @@ export default function Header() {
         }}
       >
         <div>
-          <img src={sign} alt="logo" height={"100px"} />
-          <img src={img} alt="logo" height={"100px"} />
+          <img src={sign} alt="logo" style={{ height: "7rem" }} />
+          <img src={img} alt="logo" style={{ height: "7rem" }} />
         </div>
 
         <ul

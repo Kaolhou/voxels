@@ -11,7 +11,7 @@ export default function About() {
       }}
       id="about"
     >
-      <h1 className="f_large">About</h1>
+      <h1 style={{ fontSize: "3.5rem" }}>About</h1>
       <LtrRtl
         content={[
           <>
