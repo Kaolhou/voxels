@@ -3,6 +3,7 @@ interface LinkListProps {
   content: string;
   bold?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export default function LinkList({
@@ -10,17 +11,21 @@ export default function LinkList({
   url,
   bold,
   className,
+  style,
 }: LinkListProps) {
   if (url)
     return (
-      <li className={`link_list ${bold ? "bold" : ""} ${className}`}>
+      <li
+        className={`link_list ${bold ? "bold" : ""} ${className} `}
+        style={{ ...style }}
+      >
         <a href={url}>{content}</a>
       </li>
     );
   return (
     <li
       className={`link_list ${bold ? "bold" : ""} ${className}`}
-      style={{ cursor: "default" }}
+      style={{ cursor: "default", ...style }}
     >
       {content}
     </li>

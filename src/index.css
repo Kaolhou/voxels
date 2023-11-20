@@ -199,6 +199,16 @@ body {
 .card > picture > img {
   width: 100%;
 }
+
+a.social_media > svg {
+  fill: #18181b;
+  transition: 0.3s;
+}
+
+a.social_media:hover > svg {
+  fill: #0ea5e9;
+}
+
 @media screen and (max-width: 1560px) {
   html {
     font-size: 12px;

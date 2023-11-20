@@ -1,6 +1,6 @@
 import Card from "../components/card";
-import ghoff from "../../public/persons/1699970851412.jpg";
-import rafarossi from "../../public/persons/1697203944607.jpg";
+import ghoff from "../../public/persons/hoffmann.jpg";
+import rafarossi from "../../public/persons/flavio.jpg";
 export default function Authors() {
   return (
     <section
@@ -14,14 +14,16 @@ export default function Authors() {
       }}
     >
       <Card
-        name="Gabriel Hoffman"
+        name="Gabriel Hoffmann"
         email="gabrielhoffmannrr@voxels3dstudio.page"
         photo={ghoff}
+        linkedin="https://www.linkedin.com/in/gabriel-hoffmann-450567116"
       />
       <Card
         name="Rafael Rossi"
         email="rafaelrossi@voxels3dstudio.page"
         photo={rafarossi}
+        linkedin="https://www.linkedin.com/in/rafael-rossi-1a4503296/"
       />
       <Card
         email="flavioerr@voxels3dstudio.page"

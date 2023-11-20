@@ -7,6 +7,8 @@ export default function Footer() {
         MozBoxSizing: "border-box",
         backgroundColor: "#09090b",
         marginTop: "5rem",
+        paddingTop: "5rem",
+        paddingBottom: "2rem",
       }}
     >
       <section
@@ -20,10 +22,30 @@ export default function Footer() {
       >
         <article>
           <ul>
-            <LinkList content="Home" url="#home" className={"f_large"} />
-            <LinkList content="About" url="#about" className={"f_large"} />
-            <LinkList content="Games" url="#games" className={"f_large"} />
-            <LinkList content="PressKit" url="#games" className={"f_large"} />
+            <LinkList
+              content="Home"
+              url="#home"
+              className={"f_large"}
+              style={{ lineHeight: "3rem" }}
+            />
+            <LinkList
+              content="About"
+              url="#about"
+              className={"f_large"}
+              style={{ lineHeight: "3rem" }}
+            />
+            <LinkList
+              content="Games"
+              url="#games"
+              className={"f_large"}
+              style={{ lineHeight: "3rem" }}
+            />
+            <LinkList
+              content="PressKit"
+              url="#games"
+              className={"f_large"}
+              style={{ lineHeight: "3rem" }}
+            />
           </ul>
         </article>
         <article>
