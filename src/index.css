@@ -225,6 +225,16 @@ a.social_media:hover > svg {
   fill: #0ea5e9;
 }
 
+.games_gradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    33deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
 @media screen and (min-width: 2500px) {
   html {
     font-size: 23px;

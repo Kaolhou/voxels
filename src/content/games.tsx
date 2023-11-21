@@ -34,12 +34,11 @@ export default function Games() {
     <section
       style={{
         paddingTop: "5rem",
-        margin: "auto",
-        maxWidth: "70vw",
       }}
+      className="games_gradient"
       id="games"
     >
-      <span>
+      <span style={{ margin: "auto", maxWidth: "70vw", display: "block" }}>
         <h1 style={{ fontSize: "3.5em" }}>Games</h1>
         <Slider
           slidesToShow={1}
