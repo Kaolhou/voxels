@@ -51,10 +51,10 @@ export default function Header() {
           paddingLeft: "5%",
         }}
       >
-        <div>
+        <span>
           <img src={sign} alt="logo" style={{ height: "7rem" }} />
           <img src={img} alt="logo" style={{ height: "7rem" }} />
-        </div>
+        </span>
 
         <ul
           style={{
@@ -89,7 +89,9 @@ export default function Header() {
           />
         </ul>
       </main>
-      <ScrollToTop isTop={isTop} />
+      <aside>
+        <ScrollToTop isTop={isTop} />
+      </aside>
     </header>
   );
 }

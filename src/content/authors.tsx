@@ -10,7 +10,7 @@ export default function Authors() {
         maxWidth: "70vw",
       }}
     >
-      <h2 style={{ fontSize: "3.5rem" }}>Who we are</h2>
+      <h1 style={{ fontSize: "3.5rem" }}>Who we are</h1>
       <div
         style={{
           display: "flex",

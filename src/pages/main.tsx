@@ -2,7 +2,6 @@ import Header from "../components/header";
 import { FaPlayCircle } from "react-icons/fa";
 import { MdFullscreen, MdFullscreenExit } from "react-icons/md";
 import requestFullscreen from "../utils/requestFullscreen";
-// import video_mp4 from "../../public/site/c68f78f1-ca27-4138-92a6-0d978c676fb9.mp4";
 import { useEffect, useRef, useState } from "react";
 import About from "../content/about";
 import Games from "../content/games";
@@ -20,12 +19,13 @@ export default function Main() {
     currentURL: string;
   }>({ currentIndex: 0, videos: videoUrls, currentURL: videoUrls[0] });
 
-  const handleEnded = () =>
+  const handleEnded = () => {
     setVideo((prev) => ({
       ...prev,
       currentIndex: (prev.currentIndex + 1) % prev.videos.length,
       currentURL: prev.videos[(prev.currentIndex + 1) % prev.videos.length],
     }));
+  };
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -40,8 +40,14 @@ export default function Main() {
         setIsFullScreen(Boolean(document.fullscreenElement));
       }
     };
+    const playOnMetadata = () => {
+      if (videoElement) {
+        videoElement.play();
+      }
+    };
 
     if (videoElement) {
+      videoElement.addEventListener("loadedmetadata", playOnMetadata);
       videoElement.addEventListener("play", handlePlayPause);
       videoElement.addEventListener("pause", handlePlayPause);
       videoElement.addEventListener("fullscreenchange", handleFullscreen);
@@ -49,6 +55,7 @@ export default function Main() {
 
     return () => {
       if (videoElement) {
+        videoElement.removeEventListener("loadedmetadata", playOnMetadata);
         videoElement.removeEventListener("play", handlePlayPause);
         videoElement.removeEventListener("pause", handlePlayPause);
         videoElement.removeEventListener("fullscreenchange", handleFullscreen);
@@ -90,7 +97,7 @@ export default function Main() {
               return;
             }
             handleEnded();
-            videoRef.current?.play();
+            videoRef.current?.load();
           }}
           ref={videoRef}
           // muted

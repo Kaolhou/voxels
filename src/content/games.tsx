@@ -16,7 +16,7 @@ export default function Games() {
       <LtrRtl
         content={[
           <article data-aos="slide-up">
-            <h2 className="f_large">Endless Chase</h2>
+            <h2 className="f_larger">Endless Chase</h2>
             <p className="f_medium">
               Endless Chase is a Sci-fi punk with time travel in Real Time RPG
               bringing a differentiated gameplay experience using 5 core loops
@@ -40,12 +40,19 @@ export default function Games() {
       <LtrRtl
         content={[
           <article>
-            <h2 className="f_larger">Endless Chase</h2>
+            <h2 className="f_larger">Inheritance of Shadows </h2>
             <p className="f_medium">
-              Endless Chase is a Sci-fi punk with time travel in Real Time RPG
-              bringing a differentiated gameplay experience using 5 core loops
-              strategically distributed in the 4 acts of the Kishotenketsu
-              narrative integrated into the game's Lore.
+              Welcome to New Age, a company where technology hides intriguing
+              mysteries! Help Kale solve this riddle that begins with the dark
+              death of his uncle Hassam. Major shareholder and creator of
+              ultra-advanced automatons sold by the company, Hassam had no
+              direct heirs and so Kale took over as director in his place.
+              Obstinate and determined, Kale decides to explore the company at
+              night so as not to arouse suspicion. On the first night, he finds
+              a cassette tape with instructions recorded by Hassam on how to
+              restore damaged automatons, how many nights will it take to solve
+              this puzzle? Discover all this and much more through the New Age
+              Company's secret rooms and areas!!!
             </p>
             <a
               href="/enhanced-of-shadows"

@@ -18,6 +18,9 @@ export default function Footer() {
           maxWidth: "80vw",
           margin: "auto",
           justifyContent: "space-evenly",
+          borderBottom: "2px solid #e4e4e7",
+          marginBottom: "2rem",
+          paddingBottom: "1rem",
         }}
       >
         <article>
@@ -64,6 +67,9 @@ export default function Footer() {
             <LinkList content="teste" />
           </ul>
         </article>
+      </section>
+      <section style={{ textAlign: "center" }}>
+        <span>All rights reserved. Copyright&copy; Voxels Entertainment</span>
       </section>
     </footer>
   );
