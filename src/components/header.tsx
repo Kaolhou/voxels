@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import LinkList from "./link_list";
-import img from "../../public/logos/Voxels_logo_img.svg";
-import sign from "../../public/logos/Voxels_logo_sign.svg";
+import img from "../assets/logos/Voxels_logo_img.svg";
+import sign from "../assets/logos/Voxels_logo_sign.svg";
 import ScrollToTop from "./scroll_to_top";
 
 export default function Header() {

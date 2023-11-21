@@ -1,5 +1,5 @@
 import LtrRtl from "../components/ltr_rtl";
-import endless from "../../public/logo jogo-min.png";
+import endless from "../assets/logo jogo-min.png";
 import "aos/dist/aos.css";
 
 export default function Games() {

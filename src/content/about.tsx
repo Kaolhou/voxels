@@ -1,5 +1,5 @@
 import LtrRtl from "../components/ltr_rtl";
-import voxels from "../../public/logos/VOXELSmarcafinal.png";
+import voxels from "../assets/logos/VOXELSmarcafinal.png";
 
 export default function About() {
   return (

@@ -63,8 +63,17 @@ export default function Footer() {
           </ul>
         </article>
         <article>
+          <h2>Contact us</h2>
           <ul>
-            <LinkList content="teste" />
+            <LinkList
+              onClick={() => {
+                navigator.clipboard.writeText("contact@voxels3dstudio.page");
+                alert("email copiado para o clipboard");
+              }}
+              className={"f_medium"}
+              style={{ cursor: "pointer" }}
+              content="contact@voxels3dstudio.page"
+            />
           </ul>
         </article>
       </section>

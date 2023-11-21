@@ -4,6 +4,7 @@ interface LinkListProps {
   bold?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  onClick?: () => void;
 }
 
 export default function LinkList({
@@ -12,12 +13,14 @@ export default function LinkList({
   bold,
   className,
   style,
+  onClick,
 }: LinkListProps) {
   if (url)
     return (
       <li
         className={`link_list ${bold ? "bold" : ""} ${className} `}
         style={{ ...style }}
+        onClick={onClick}
       >
         <a href={url}>{content}</a>
       </li>
@@ -26,6 +29,7 @@ export default function LinkList({
     <li
       className={`link_list ${bold ? "bold" : ""} ${className}`}
       style={{ cursor: "default", ...style }}
+      onClick={onClick}
     >
       {content}
     </li>

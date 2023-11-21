@@ -12,7 +12,7 @@ export default function autoImport() {
   ]
     .map(
       (i) =>
-        `${window.location.protocol}//${window.location.host}/public/site/site/${i}`
+        `${window.location.protocol}//${window.location.host}/src/assets/site/site/${i}`
     )
     .map((i) => i.replaceAll(" ", "%20"));
 }
