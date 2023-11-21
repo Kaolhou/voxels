@@ -40,14 +40,14 @@ export default function Main() {
         setIsFullScreen(Boolean(document.fullscreenElement));
       }
     };
-    const playOnMetadata = () => {
-      if (videoElement) {
-        videoElement.play();
-      }
-    };
+    // const playOnMetadata = () => {
+    //   if (videoElement) {
+    //     videoElement.play();
+    //   }
+    // };
 
     if (videoElement) {
-      videoElement.addEventListener("loadedmetadata", playOnMetadata);
+      // videoElement.addEventListener("loadedmetadata", playOnMetadata);
       videoElement.addEventListener("play", handlePlayPause);
       videoElement.addEventListener("pause", handlePlayPause);
       videoElement.addEventListener("fullscreenchange", handleFullscreen);
@@ -55,7 +55,7 @@ export default function Main() {
 
     return () => {
       if (videoElement) {
-        videoElement.removeEventListener("loadedmetadata", playOnMetadata);
+        // videoElement.removeEventListener("loadedmetadata", playOnMetadata);
         videoElement.removeEventListener("play", handlePlayPause);
         videoElement.removeEventListener("pause", handlePlayPause);
         videoElement.removeEventListener("fullscreenchange", handleFullscreen);
@@ -87,6 +87,13 @@ export default function Main() {
           className="youtube-video"
           autoPlay={true}
           onClick={playPause}
+          onPlay={() => {
+            const nextVideo = document.getElementById(
+              "nextVideo"
+            )! as HTMLVideoElement;
+            nextVideo.src = video.videos[video.currentIndex + 1];
+            nextVideo.load();
+          }}
           preload="auto"
           onEnded={() => {
             if (video.currentIndex == 4) {
@@ -98,12 +105,14 @@ export default function Main() {
             }
             handleEnded();
             videoRef.current?.load();
+            videoRef.current?.play();
           }}
           ref={videoRef}
           // muted
         >
           <source src={video.currentURL} />
         </video>
+        <video id="nextVideo" style={{ display: "none" }}></video>
         <span
           style={{
             position: "absolute",
