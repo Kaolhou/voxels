@@ -60,6 +60,7 @@ export default function Header() {
           style={{
             display: "flex",
             listStyle: "none",
+            gap: "1rem",
           }}
           className="list-child"
         >

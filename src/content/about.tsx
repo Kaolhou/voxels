@@ -32,8 +32,8 @@ export default function About() {
           </>,
           <span
             style={{
-              minWidth: 180,
-              maxWidth: 500,
+              minWidth: "10rem",
+              maxWidth: "50rem",
               flex: 1,
               display: "flex",
               alignItems: "center",

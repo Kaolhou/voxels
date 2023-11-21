@@ -33,7 +33,7 @@ export default function Card({ name, email, photo, linkedin }: CardProps) {
           <span>
             {linkedin ? (
               <a href={linkedin} target="_blank" className="social_media">
-                <FaLinkedin size={50} />
+                <FaLinkedin size={"3rem"} />
               </a>
             ) : null}
           </span>

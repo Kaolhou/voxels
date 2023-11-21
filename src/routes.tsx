@@ -4,12 +4,14 @@ import Shadows from "./pages/shadows";
 import PressKit from "./pages/presskit";
 
 export default function RoutesC() {
+  //prepare to i18n ou any internationalization
+  // if(document.location.)
   return (
     <Router>
       <Routes>
-        <Route Component={Main} path="/" />
+        <Route element={<Main />} path="/" />
         <Route Component={Shadows} path="/enhanced-of-shadows" />
-        <Route Component={PressKit} path="/presskit" />
+        <Route Component={PressKit} path="/press-kit" />
       </Routes>
     </Router>
   );

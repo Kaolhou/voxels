@@ -107,6 +107,8 @@ h1 {
 
 .slick-slide img {
   margin: auto;
+  display: flex;
+  align-items: center;
 }
 
 .youtube-video {
@@ -119,8 +121,8 @@ h1 {
 
 .teste {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 .slick-track:nth-child(0) img {
@@ -144,10 +146,11 @@ h1 {
   line-height: 1;
   text-decoration: none;
   color: #ffffff;
-  font-size: 18px;
-  border-radius: 20px;
-  width: 200px;
-  height: 40px;
+  font-size: 2rem;
+  border-radius: 2rem;
+  width: fit-content;
+  padding: 1rem;
+  height: fit-content;
   font-weight: bold;
   border: none;
   border-bottom: 5px solid #0284c7;
@@ -202,12 +205,15 @@ h1 {
 .card > picture > img {
   width: 100%;
 }
-.card_social {
-}
+
 .card_content {
   display: flex;
   flex-direction: column;
   justify-content: end;
+}
+
+.slick-arrow::before {
+  display: none;
 }
 
 a.social_media > svg {
@@ -219,6 +225,16 @@ a.social_media:hover > svg {
   fill: #0ea5e9;
 }
 
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 3000px) {
+  html {
+    font-size: 30px;
+  }
+}
 @media screen and (max-width: 1560px) {
   html {
     font-size: 12px;

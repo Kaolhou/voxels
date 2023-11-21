@@ -44,7 +44,7 @@ export default function LtrRtl({
           : "row-reverse",
         display: "flex",
         marginBottom: 100,
-        gap: 30,
+        gap: "3rem",
       }}
     >
       {content.map((component, index) => (
