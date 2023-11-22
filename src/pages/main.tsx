@@ -37,6 +37,8 @@ export default function Main() {
   useEffect(() => {
     const videoElement = videoRef.current;
 
+    videoElement?.play().catch(() => console.info("couldn't autoplay video"));
+
     const handlePlayPause = () => {
       if (videoElement) {
         setIsPaused(videoElement.paused);
@@ -93,7 +95,6 @@ export default function Main() {
       >
         <video
           className="youtube-video"
-          autoPlay={true}
           onClick={playPause}
           preload="auto"
           onEnded={() => {
