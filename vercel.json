@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/" },
+    { "source": "/enhanced-of-shadows", "destination": "/enhanced-of-shadows" }
+  ]
+}
