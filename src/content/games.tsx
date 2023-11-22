@@ -43,9 +43,12 @@ export default function Games() {
       <Slider
         slidesToShow={1}
         slidesToScroll={1}
-        // arrows={false}
-        nextArrow={<Button side="r" />}
-        prevArrow={<Button side="l" />}
+        nextArrow={
+          <Button side="r" style={{ zIndex: 999 }} label="Next item" />
+        }
+        prevArrow={
+          <Button side="l" style={{ zIndex: 999 }} label="Previous item" />
+        }
       >
         <LtrRtl
           content={[
@@ -89,7 +92,7 @@ export default function Games() {
                 the New Age Company's secret rooms and areas!!!
               </p>
               <a
-                href="/enhanced-of-shadows"
+                href="/inheritance"
                 target="_blank"
                 style={{ textDecoration: "none" }}
               >

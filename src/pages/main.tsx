@@ -141,7 +141,6 @@ export default function Main() {
           }}
           onClick={() => {
             const element = document.getElementById("home")!;
-            console.log(document.fullscreenEnabled);
             document.fullscreenElement
               ? document.exitFullscreen().then(() => setIsFullScreen(false))
               : requestFullscreen(element).then(() => setIsFullScreen(true));

@@ -11,6 +11,7 @@ export default function ScrollToTop({ isTop }: { isTop: boolean }) {
       }}
       value="scroll to top"
       className="button_to_top"
+      aria-label="Back to top"
       onClick={() =>
         window.scrollTo({
           top: 0,

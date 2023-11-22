@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function Shadows() {
   useEffect(() => {
-    document.title = "Enhanced of Shadows";
+    document.title = "Inheritance of Shadows";
   }, []);
   return (
     <main
@@ -15,7 +15,7 @@ export default function Shadows() {
         gap: 15,
       }}
     >
-      <h1>Enhanced of Shadows</h1>
+      <h1>Inheritance of Shadows</h1>
       <iframe
         style={{ border: 0, maxHeight: 315, maxWidth: 560 }}
         width="560"

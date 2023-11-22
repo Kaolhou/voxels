@@ -10,7 +10,7 @@ export default function RoutesC() {
     <Router>
       <Routes>
         <Route element={<Main />} path="/" />
-        <Route element={<Shadows />} path="/enhanced-of-shadows" />
+        <Route element={<Shadows />} path="/inheritance" />
         <Route element={<PressKit />} path="/press-kit" />
       </Routes>
     </Router>

@@ -126,6 +126,8 @@ h1 {
   height: 100vh;
 }
 .slick-track:nth-child(0) img {
+  display: flex;
+  justify-content: center;
   height: 90vh !important;
   overflow: hidden;
 }
