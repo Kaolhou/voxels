@@ -10,8 +10,8 @@ export default function RoutesC() {
     <Router>
       <Routes>
         <Route element={<Main />} path="/" />
-        <Route Component={Shadows} path="/enhanced-of-shadows" />
-        <Route Component={PressKit} path="/press-kit" />
+        <Route element={<Shadows />} path="/enhanced-of-shadows" />
+        <Route element={<PressKit />} path="/press-kit" />
       </Routes>
     </Router>
   );
