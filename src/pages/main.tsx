@@ -17,13 +17,20 @@ export default function Main() {
     videos: string[];
     currentIndex: number;
     currentURL: string;
-  }>({ currentIndex: 0, videos: videoUrls, currentURL: videoUrls[0] });
+    hasToPlay: boolean;
+  }>({
+    currentIndex: 0,
+    videos: videoUrls,
+    currentURL: videoUrls[0],
+    hasToPlay: true,
+  });
 
-  const handleEnded = () => {
+  const handleEnded = (hasToPlay = true) => {
     setVideo((prev) => ({
       ...prev,
       currentIndex: (prev.currentIndex + 1) % prev.videos.length,
       currentURL: prev.videos[(prev.currentIndex + 1) % prev.videos.length],
+      hasToPlay,
     }));
   };
 
@@ -40,11 +47,6 @@ export default function Main() {
         setIsFullScreen(Boolean(document.fullscreenElement));
       }
     };
-    // const playOnMetadata = () => {
-    //   if (videoElement) {
-    //     videoElement.play();
-    //   }
-    // };
 
     if (videoElement) {
       // videoElement.addEventListener("loadedmetadata", playOnMetadata);
@@ -62,13 +64,19 @@ export default function Main() {
       }
     };
   }, []);
+  useEffect(() => {
+    videoRef.current?.load();
+    if (video.hasToPlay) videoRef.current?.play();
+    else videoRef.current?.pause();
+  }, [video]);
 
-  const playPause = () =>
+  const playPause = () => {
     videoRef.current?.ended
       ? videoRef.current.play()
       : videoRef.current?.paused
       ? videoRef.current.play()
       : videoRef.current?.pause();
+  };
 
   return (
     <main style={{ overflow: "hidden" }}>
@@ -87,13 +95,6 @@ export default function Main() {
           className="youtube-video"
           autoPlay={true}
           onClick={playPause}
-          onPlay={() => {
-            const nextVideo = document.getElementById(
-              "nextVideo"
-            )! as HTMLVideoElement;
-            nextVideo.src = video.videos[video.currentIndex + 1];
-            nextVideo.load();
-          }}
           preload="auto"
           onEnded={() => {
             if (video.currentIndex == 4) {
@@ -101,6 +102,7 @@ export default function Main() {
                 behavior: "smooth",
                 top: document.getElementById("about")?.offsetTop,
               });
+              handleEnded(false);
               return;
             }
             handleEnded();
@@ -112,7 +114,7 @@ export default function Main() {
         >
           <source src={video.currentURL} />
         </video>
-        <video id="nextVideo" style={{ display: "none" }}></video>
+        {/* <video id="nextVideo" style={{ display: "none" }}></video> */}
         <span
           style={{
             position: "absolute",

@@ -18,7 +18,7 @@ export default function ScrollToTop({ isTop }: { isTop: boolean }) {
         })
       }
     >
-      <BiArrowToTop size={30} color={"#fff"} />
+      <BiArrowToTop size={"25rem"} color={"#fff"} />
     </button>
   );
 }
