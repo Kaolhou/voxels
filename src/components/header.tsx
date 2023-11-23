@@ -1,25 +1,9 @@
-import { useEffect, useState } from "react";
 import LinkList from "./link_list";
 import img from "../assets/logos/Voxels_logo_img.svg";
 import sign from "../assets/logos/Voxels_logo_sign.svg";
 import ScrollToTop from "./scroll_to_top";
 
-export default function Header() {
-  const [isTop, setIsTop] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-
-      setIsTop(scrollTop < 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
+export default function Header({ isTop }: { isTop: boolean }) {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();

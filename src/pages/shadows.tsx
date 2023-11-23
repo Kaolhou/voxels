@@ -18,8 +18,8 @@ export default function Shadows() {
       <h1>Inheritance of Shadows</h1>
       <iframe
         style={{ border: 0, maxHeight: 315, maxWidth: 560 }}
-        width="560"
-        height="315"
+        width="1000rem"
+        height="400rem"
         src="https://www.youtube-nocookie.com/embed/Ts-kDhRoFoo?autoplay=1&rel=0"
         allow="autoplay; encrypted-media"
         allowFullScreen

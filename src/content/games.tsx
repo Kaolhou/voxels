@@ -43,6 +43,10 @@ export default function Games() {
       <Slider
         slidesToShow={1}
         slidesToScroll={1}
+        autoplaySpeed={1000}
+        speed={1000}
+        autoplay
+        infinite
         nextArrow={
           <Button side="r" style={{ zIndex: 999 }} label="Next item" />
         }

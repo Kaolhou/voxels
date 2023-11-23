@@ -236,6 +236,19 @@ a.social_media:hover > svg {
     rgba(0, 212, 255, 1) 100%
   );
 }
+.icon > a > svg {
+  transition: 0.3s;
+}
+
+.icon-steam:hover > a > svg {
+  fill: #1b2838;
+}
+.icon-linkedin:hover > a > svg {
+  fill: #0ea5e9;
+}
+.icon-insta:hover > a > svg {
+  fill: #dd2a7b;
+}
 
 @media screen and (min-width: 2500px) {
   html {
