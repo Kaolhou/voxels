@@ -1,5 +1,5 @@
 import LtrRtl from "../components/ltr_rtl";
-import voxels from "../assets/logos/VOXELSmarcafinal.png";
+import voxels from "../assets/logos/VOXELSmarcafinal.svg";
 
 export default function About() {
   return (
@@ -37,9 +37,14 @@ export default function About() {
               flex: 1,
               display: "flex",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <img src={voxels} alt="voxels" style={{ width: "100%" }} />
+            <img
+              src={voxels}
+              alt="voxels"
+              style={{ width: "100%", maxWidth: "20rem" }}
+            />
           </span>,
         ]}
         side="rtl"
