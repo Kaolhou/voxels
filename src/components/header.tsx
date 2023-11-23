@@ -69,7 +69,7 @@ export default function Header({ isTop }: { isTop: boolean }) {
           <LinkList
             className={"f_medium"}
             content="Press Kit"
-            url="/public/PRESS_KIT_VOXELS.zip"
+            url="/PRESS_KIT_VOXELS.zip"
             bold={true}
           />
         </ul>
