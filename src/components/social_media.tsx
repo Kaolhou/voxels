@@ -1,6 +1,6 @@
-import { FaSteam } from "react-icons/fa";
+// import { FaSteam } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+// import { FaInstagram } from "react-icons/fa";
 
 export default function SocialMedia({ isTop }: { isTop: boolean }) {
   return (
@@ -16,21 +16,25 @@ export default function SocialMedia({ isTop }: { isTop: boolean }) {
         gap: 25,
       }}
     >
-      <span className="icon icon-steam">
+      {/* <span className="icon icon-steam">
         <a href="/" aria-label="Steam Page">
           <FaSteam size="2.3rem" color={"#fff"} />
         </a>
-      </span>
+      </span> */}
       <span className="icon icon-linkedin">
-        <a href="/" aria-label="Linkedin Page">
+        <a
+          href="https://www.linkedin.com/company/voxels-entertainment-and-games-ltda/?viewAsMember=true"
+          target="_blank"
+          aria-label="Linkedin Page"
+        >
           <FaLinkedin size="2.3rem" color={"#fff"} />
         </a>
       </span>
-      <span className="icon icon-insta">
+      {/* <span className="icon icon-insta">
         <a href="/" aria-label="Instagram Page">
           <FaInstagram size="2.3rem" color={"#fff"} />
         </a>
-      </span>
+      </span> */}
     </div>
   );
 }

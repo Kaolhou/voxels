@@ -1,6 +1,6 @@
 import Card from "../components/card";
 import ghoff from "../assets/persons/hoffmann.jpg";
-import rafarossi from "../assets/persons/1697203944607.jpg";
+import rafarossi from "../assets/persons/rafa.jpg";
 import flavio from "../assets/persons/flavio.jpg";
 export default function Authors() {
   return (

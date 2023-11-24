@@ -34,6 +34,8 @@ export default function VideoSplit() {
 
     videoElement?.play().catch(() => console.info("couldn't autoplay video"));
 
+    videoElement?.addEventListener("error", () => {});
+
     const handlePlayPause = () => {
       if (videoElement) {
         setIsPaused(videoElement.paused);
@@ -58,6 +60,7 @@ export default function VideoSplit() {
         videoElement.removeEventListener("play", handlePlayPause);
         videoElement.removeEventListener("pause", handlePlayPause);
         videoElement.removeEventListener("fullscreenchange", handleFullscreen);
+        videoElement?.removeEventListener("error", () => {});
       }
     };
   }, []);
