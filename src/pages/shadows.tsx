@@ -28,6 +28,7 @@ export default function Shadows() {
         }}
         src="https://www.youtube-nocookie.com/embed/nMCXgDVecJg?autoplay=1&rel=0 "
         allow="autoplay; encrypted-media;"
+        allowFullScreen
       ></iframe>
       <ButtonLogo text="Become a backer" logo={catarse} />
     </main>

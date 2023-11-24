@@ -72,8 +72,6 @@ export default function VideoSplit() {
   useEffect(() => {
     const videoElement = videoRef.current;
     const handleCanPlayThrough = () => {
-      // Quando o navegador considera que pode reproduzir o vídeo até o final sem interrupções
-      // Carregue o próximo vídeo para dar preload
       const nextIndex = (video.currentIndex + 1) % video.videos.length;
       const nextVideoURL = video.videos[nextIndex];
       const nextVideoElement = document.createElement("video");
@@ -82,7 +80,6 @@ export default function VideoSplit() {
     };
     if (videoElement) {
       videoElement.addEventListener("canplaythrough", handleCanPlayThrough);
-      // Restante do seu código...
     }
     videoElement?.load();
     if (video.hasToPlay) videoElement?.play();
