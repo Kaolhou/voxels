@@ -39,6 +39,7 @@ export default function VideoSplit() {
         setIsPaused(videoElement.paused);
       }
     };
+
     const handleFullscreen = () => {
       if (videoElement) {
         setIsFullScreen(Boolean(document.fullscreenElement));
@@ -69,9 +70,32 @@ export default function VideoSplit() {
       : videoRef.current?.pause();
   };
   useEffect(() => {
-    videoRef.current?.load();
-    if (video.hasToPlay) videoRef.current?.play();
-    else videoRef.current?.pause();
+    const videoElement = videoRef.current;
+    const handleCanPlayThrough = () => {
+      // Quando o navegador considera que pode reproduzir o vídeo até o final sem interrupções
+      // Carregue o próximo vídeo para dar preload
+      const nextIndex = (video.currentIndex + 1) % video.videos.length;
+      const nextVideoURL = video.videos[nextIndex];
+      const nextVideoElement = document.createElement("video");
+      nextVideoElement.src = nextVideoURL;
+      nextVideoElement.preload = "auto";
+    };
+    if (videoElement) {
+      videoElement.addEventListener("canplaythrough", handleCanPlayThrough);
+      // Restante do seu código...
+    }
+    videoElement?.load();
+    if (video.hasToPlay) videoElement?.play();
+    else videoElement?.pause();
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener(
+          "canplaythrough",
+          handleCanPlayThrough
+        );
+      }
+    };
   }, [video]);
   return (
     <div
@@ -107,7 +131,7 @@ export default function VideoSplit() {
       >
         <source src={video.currentURL} />
       </video>
-      {/* <video id="nextVideo" style={{ display: "none" }}></video> */}
+      <video id="nextVideo" style={{ width: 0, height: 0 }}></video>
       <span
         style={{
           position: "absolute",
