@@ -60,6 +60,14 @@ export default function Footer() {
               content="Linkedin"
               url="https://www.linkedin.com/company/voxels-entertainment-and-games-ltda/?viewAsMember=true"
               className="f_medium"
+              style={{ lineHeight: "3rem" }}
+            />
+            <LinkList
+              content="YouTube"
+              target="_blank"
+              url="https://www.youtube.com/@voxelsentertainmentandgame9389"
+              className="f_medium"
+              style={{ lineHeight: "3rem" }}
             />
           </ul>
         </article>

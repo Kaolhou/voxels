@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import ButtonLogo from "../components/button_logo";
+import catarse from "../assets/logos/catarse.svg";
 
 export default function Shadows() {
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function Shadows() {
         allow="autoplay; encrypted-media"
         allowFullScreen
       ></iframe>
-      <span>teste</span>
+      <ButtonLogo text="Become a backer" logo={catarse} />
     </main>
   );
 }

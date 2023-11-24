@@ -1,5 +1,6 @@
 // import { FaSteam } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 // import { FaInstagram } from "react-icons/fa";
 
 export default function SocialMedia({ isTop }: { isTop: boolean }) {
@@ -28,6 +29,15 @@ export default function SocialMedia({ isTop }: { isTop: boolean }) {
           aria-label="Linkedin Page"
         >
           <FaLinkedin size="2.3rem" color={"#fff"} />
+        </a>
+      </span>
+      <span className="icon icon-youtube">
+        <a
+          href="https://www.youtube.com/@voxelsentertainmentandgame9389"
+          target="_blank"
+          aria-label="Youtube Channel"
+        >
+          <FaYoutube size="2.3rem" color={"#fff"} />
         </a>
       </span>
       {/* <span className="icon icon-insta">

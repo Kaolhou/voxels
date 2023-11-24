@@ -241,6 +241,9 @@ a.social_media:hover > svg {
   transition: 0.3s;
 }
 
+.icon-youtube:hover > a > svg {
+  fill: #ff0000;
+}
 .icon-steam:hover > a > svg {
   fill: #1b2838;
 }
@@ -277,6 +280,9 @@ a.social_media:hover > svg {
 .copy-to-clipboard-text-container:hover .tooltip {
   display: block;
   position: absolute;
+}
+.button_action > img {
+  fill: #ffffff;
 }
 
 @media screen and (min-width: 2500px) {
