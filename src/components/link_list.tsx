@@ -35,7 +35,7 @@ export default function LinkList({
     return (
       <span
         className={`link_list ${bold ? "bold" : ""} ${className}`}
-        style={{ cursor: "default", ...style, display: "block" }}
+        style={{ cursor: "pointer", ...style, display: "block" }}
         onClick={onClick}
       >
         {content}

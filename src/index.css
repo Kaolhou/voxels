@@ -275,6 +275,7 @@ a.social_media:hover > svg {
 .copy-to-clipboard-text-container {
   list-style: none;
   position: relative;
+  cursor: pointer;
 }
 
 .copy-to-clipboard-text-container:hover .tooltip {
