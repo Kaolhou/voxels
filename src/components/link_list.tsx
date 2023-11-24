@@ -6,6 +6,7 @@ interface LinkListProps {
   style?: React.CSSProperties;
   onClick?: () => void;
   isSpan?: boolean;
+  target?: "_blank" | "_self" | "_parent" | "_top";
 }
 
 export default function LinkList({
@@ -16,6 +17,7 @@ export default function LinkList({
   style,
   isSpan,
   onClick,
+  target,
 }: LinkListProps) {
   if (url)
     return (
@@ -24,7 +26,9 @@ export default function LinkList({
         style={{ ...style }}
         onClick={onClick}
       >
-        <a href={url}>{content}</a>
+        <a href={url} target={target}>
+          {content}
+        </a>
       </li>
     );
   if (isSpan)

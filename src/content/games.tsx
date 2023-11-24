@@ -75,6 +75,7 @@ export default function Games() {
                 href="/inheritance"
                 target="_blank"
                 style={{ textDecoration: "none" }}
+                aria-label="More information about"
               >
                 <button className="button_action" style={{ cursor: "pointer" }}>
                   More Info

@@ -69,8 +69,9 @@ export default function Header({ isTop }: { isTop: boolean }) {
           <LinkList
             className={"f_medium"}
             content="Press Kit"
-            url="/PRESS_KIT_VOXELS.zip"
+            url="https://impress.games/press-kit/voxels-entertainment/endless-chase"
             bold={true}
+            target="_blank"
           />
         </ul>
       </main>
