@@ -5,7 +5,8 @@ const CopyToClipboard: React.FC<{
   text: string;
   size?: "f_small" | "f_medium" | "f_large";
   isTop?: boolean;
-}> = ({ text, size = "f_medium", isTop = true }) => {
+  isSpan?: boolean;
+}> = ({ text, size = "f_medium", isTop = true, isSpan }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyClick = () => {
@@ -31,7 +32,7 @@ const CopyToClipboard: React.FC<{
       <span className={`tooltip ${isTop ? "top" : "bottom"}`}>
         {copied ? "✅" : "📋"}
       </span>
-      <LinkList content={text} className={size}></LinkList>
+      <LinkList isSpan={isSpan} content={text} className={size}></LinkList>
     </div>
   );
 };

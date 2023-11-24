@@ -5,6 +5,7 @@ interface LinkListProps {
   className?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
+  isSpan?: boolean;
 }
 
 export default function LinkList({
@@ -13,6 +14,7 @@ export default function LinkList({
   bold,
   className,
   style,
+  isSpan,
   onClick,
 }: LinkListProps) {
   if (url)
@@ -25,6 +27,17 @@ export default function LinkList({
         <a href={url}>{content}</a>
       </li>
     );
+  if (isSpan)
+    return (
+      <span
+        className={`link_list ${bold ? "bold" : ""} ${className}`}
+        style={{ cursor: "default", ...style, display: "block" }}
+        onClick={onClick}
+      >
+        {content}
+      </span>
+    );
+
   return (
     <li
       className={`link_list ${bold ? "bold" : ""} ${className}`}

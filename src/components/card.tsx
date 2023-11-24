@@ -16,7 +16,7 @@ export default function Card({ name, email, photo, linkedin }: CardProps) {
         <h2 className="f_larger">{name}</h2>
         <span className="card_social">
           {email ? (
-            <CopyToClipboard text={email} size="f_small" isTop={false} />
+            <CopyToClipboard isSpan text={email} size="f_small" isTop={false} />
           ) : null}
           <span>
             {linkedin ? (
