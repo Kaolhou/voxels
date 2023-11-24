@@ -1,3 +1,4 @@
+import CopyToClipboard from "./copy_to_clipboard";
 import LinkList from "./link_list";
 
 export default function Footer() {
@@ -65,15 +66,7 @@ export default function Footer() {
         <article>
           <h2>Contact us</h2>
           <ul>
-            <LinkList
-              onClick={() => {
-                navigator.clipboard.writeText("contact@voxels3dstudio.page");
-                alert("email copiado para o clipboard");
-              }}
-              className={"f_medium"}
-              style={{ cursor: "pointer" }}
-              content="contact@voxels3dstudio.page"
-            />
+            <CopyToClipboard text="contact@voxels3dstudio.page" />
           </ul>
         </article>
       </section>

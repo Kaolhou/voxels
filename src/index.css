@@ -249,6 +249,34 @@ a.social_media:hover > svg {
 .icon-insta:hover > a > svg {
   fill: #dd2a7b;
 }
+.tooltip.top {
+  bottom: 3rem;
+}
+.tooltip.top {
+  bottom: 3rem;
+}
+.tooltip.bottom {
+  top: 3rem;
+}
+
+.tooltip {
+  display: none;
+  font-size: 1.5rem;
+  background-color: #18181b;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+  left: 40%;
+}
+.copy-to-clipboard-text-container {
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.copy-to-clipboard-text-container:hover .tooltip {
+  display: block;
+  position: absolute;
+}
 
 @media screen and (min-width: 2500px) {
   html {

@@ -13,25 +13,21 @@ export default function Shadows() {
         justifyContent: "center",
         height: "100vh",
         gap: 15,
+        width: "100vw",
       }}
     >
-      <h1>Inheritance of Shadows</h1>
+      <h1 style={{ fontSize: "3.5rem" }}>Inheritance of Shadows</h1>
       <iframe
-        style={{ border: 0, maxHeight: 315, maxWidth: 560 }}
-        width="1000rem"
-        height="400rem"
+        style={{
+          border: 0,
+          aspectRatio: "16 / 9",
+          maxWidth: "90%",
+          flex: 1,
+        }}
         src="https://www.youtube-nocookie.com/embed/Ts-kDhRoFoo?autoplay=1&rel=0"
         allow="autoplay; encrypted-media"
         allowFullScreen
       ></iframe>
-      {/* <iframe
-        style={{ border: 0 }}
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/Ts-kDhRoFoo?si=TDASxiJZC9aA_XkC?autoplay=1&rel=0"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      ></iframe> */}
       <span>teste</span>
     </main>
   );

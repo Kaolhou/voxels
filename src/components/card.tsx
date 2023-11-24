@@ -1,4 +1,5 @@
 import { FaLinkedin } from "react-icons/fa6";
+import CopyToClipboard from "./copy_to_clipboard";
 interface CardProps {
   name: string;
   email?: string;
@@ -15,20 +16,7 @@ export default function Card({ name, email, photo, linkedin }: CardProps) {
         <h2 className="f_larger">{name}</h2>
         <span className="card_social">
           {email ? (
-            <p
-              className="link_list f_small"
-              style={{
-                cursor: "pointer",
-                textOverflow: "ellipsis",
-                whiteSpace: "nowrap",
-              }}
-              onClick={() => {
-                navigator.clipboard.writeText(email);
-                alert("email copiado para o clipboard");
-              }}
-            >
-              {email}
-            </p>
+            <CopyToClipboard text={email} size="f_small" isTop={false} />
           ) : null}
           <span>
             {linkedin ? (
