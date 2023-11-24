@@ -6,7 +6,9 @@ const CopyToClipboard: React.FC<{
   size?: "f_small" | "f_medium" | "f_large";
   isTop?: boolean;
   isSpan?: boolean;
-}> = ({ text, size = "f_medium", isTop = true, isSpan }) => {
+  isLi?: boolean;
+  style?: React.CSSProperties;
+}> = ({ text, size = "f_medium", isTop = true, isSpan, isLi, style }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyClick = () => {
@@ -22,12 +24,27 @@ const CopyToClipboard: React.FC<{
   const resetCopiedState = () => {
     setCopied(false);
   };
+  if (isLi)
+    return (
+      <li
+        className="copy-to-clipboard-text-container"
+        onClick={handleCopyClick}
+        onMouseEnter={resetCopiedState}
+        style={style}
+      >
+        <span className={`tooltip ${isTop ? "top" : "bottom"}`}>
+          {copied ? "✅" : "📋"}
+        </span>
+        <LinkList isSpan={isSpan} content={text} className={size}></LinkList>
+      </li>
+    );
 
   return (
     <div
       className="copy-to-clipboard-text-container"
       onClick={handleCopyClick}
       onMouseEnter={resetCopiedState}
+      style={style}
     >
       <span className={`tooltip ${isTop ? "top" : "bottom"}`}>
         {copied ? "✅" : "📋"}

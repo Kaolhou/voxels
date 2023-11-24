@@ -66,7 +66,11 @@ export default function Footer() {
         <article>
           <h2>Contact us</h2>
           <ul>
-            <CopyToClipboard text="contact@voxels3dstudio.page" />
+            <CopyToClipboard
+              isLi={true}
+              isSpan={true}
+              text="contact@voxels3dstudio.page"
+            />
           </ul>
         </article>
       </section>

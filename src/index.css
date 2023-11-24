@@ -190,6 +190,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   min-width: 100px;
   flex: 1 1 0;
+  overflow: hidden;
 }
 
 .card > picture {
@@ -269,7 +270,7 @@ a.social_media:hover > svg {
   left: 40%;
 }
 .copy-to-clipboard-text-container {
-  padding: 0.5rem 0;
+  list-style: none;
   position: relative;
 }
 
