@@ -35,23 +35,27 @@ export default function Footer({ locale }: { locale: languages }) {
               url="#home"
               className={"f_medium"}
               style={{ lineHeight: "3rem" }}
+              target="_blank"
             />
             <LinkList
               content={locale == "en" ? en["header.about"] : pt["header.about"]}
               url="#about"
               className={"f_medium"}
               style={{ lineHeight: "3rem" }}
+              target="_blank"
             />
             <LinkList
               content={locale == "en" ? en["header.games"] : pt["header.games"]}
               url="#games"
               className={"f_medium"}
               style={{ lineHeight: "3rem" }}
+              target="_blank"
             />
             <LinkList
               content={
                 locale == "en" ? en["header.presskit"] : pt["header.presskit"]
               }
+              target="_blank"
               url="https://impress.games/press-kit/voxels-entertainment/endless-chase"
               className={"f_medium"}
               style={{ lineHeight: "3rem" }}
