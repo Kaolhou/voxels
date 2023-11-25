@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Header from "../components/header";
 import About from "../content/about";
 import Games from "../content/games";
@@ -8,7 +9,13 @@ import VideoSplit from "../components/video_splitted";
 import { useEffect, useState } from "react";
 import { languages } from "../utils/types";
 
-export default function Main({ locale }: { locale: languages }) {
+export default function Main({
+  locale,
+  setLang,
+}: {
+  setLang: (...any: any) => void;
+  locale: languages;
+}) {
   const [isTop, setIsTop] = useState(true);
 
   useEffect(() => {
@@ -27,7 +34,7 @@ export default function Main({ locale }: { locale: languages }) {
 
   return (
     <main style={{ overflow: "hidden" }}>
-      <SocialMedia isTop={isTop} />
+      <SocialMedia isTop={isTop} setLang={setLang} />
       <Header isTop={isTop} locale={locale} />
       <VideoSplit />
       <About locale={locale} />

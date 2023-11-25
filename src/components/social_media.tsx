@@ -1,15 +1,22 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import { FaSteam } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 // import { FaInstagram } from "react-icons/fa";
 
-export default function SocialMedia({ isTop }: { isTop: boolean }) {
+export default function SocialMedia({
+  isTop,
+  setLang,
+}: {
+  isTop: boolean;
+  setLang: (...any: any) => void;
+}) {
   return (
     <div
       style={{
         position: "fixed",
         zIndex: 999,
-        top: "50%",
+        top: "40%",
         left: isTop ? -999 : 20,
         transition: ".3s",
         display: "flex",
@@ -17,11 +24,20 @@ export default function SocialMedia({ isTop }: { isTop: boolean }) {
         gap: 25,
       }}
     >
-      {/* <span className="icon icon-steam">
-        <a href="/" aria-label="Steam Page">
-          <FaSteam size="2.3rem" color={"#fff"} />
-        </a>
-      </span> */}
+      <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+        <li
+          onClick={() => setLang("pt")}
+          style={{ fontSize: "2rem", cursor: "pointer" }}
+        >
+          🇧🇷
+        </li>
+        <li
+          onClick={() => setLang("en")}
+          style={{ fontSize: "2rem", cursor: "pointer" }}
+        >
+          🇺🇸
+        </li>
+      </ul>
       <span className="icon icon-linkedin">
         <a
           href="https://www.linkedin.com/company/voxels-entertainment-and-games-ltda/?viewAsMember=true"
