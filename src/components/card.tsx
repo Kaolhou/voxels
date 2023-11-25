@@ -13,17 +13,7 @@ export default function Card({ name, email, photo, linkedin }: CardProps) {
         <img src={photo} alt={name} />
       </picture>
       <span className="card_content">
-        <h2
-          className="f_larger"
-          style={{
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-            maxWidth: "100%",
-            overflow: "hidden",
-          }}
-        >
-          {name}
-        </h2>
+        <h2 className="f_large">{name}</h2>
         <span className="card_social">
           {email ? (
             <CopyToClipboard

@@ -13,19 +13,22 @@ export default function VideoSplit() {
     currentIndex: number;
     currentURL: string;
     hasToPlay: boolean;
+    endedOnce: boolean;
   }>({
     currentIndex: 0,
     videos: videoUrls,
     currentURL: videoUrls[0],
     hasToPlay: true,
+    endedOnce: false,
   });
 
-  const handleEnded = (hasToPlay = true) => {
+  const handleEnded = (hasToPlay = true, endedOnce?: boolean) => {
     setVideo((prev) => ({
       ...prev,
       currentIndex: (prev.currentIndex + 1) % prev.videos.length,
       currentURL: prev.videos[(prev.currentIndex + 1) % prev.videos.length],
       hasToPlay,
+      endedOnce: endedOnce ?? prev.endedOnce,
     }));
   };
 
@@ -81,7 +84,7 @@ export default function VideoSplit() {
     if (videoElement) {
       videoElement.addEventListener("canplaythrough", handleCanPlayThrough);
     }
-    videoElement?.load();
+    if (video.currentIndex != 0 || video.endedOnce) videoElement?.load();
     if (video.hasToPlay) videoElement?.play();
     else videoElement?.pause();
 
@@ -109,14 +112,14 @@ export default function VideoSplit() {
         className="youtube-video"
         onClick={playPause}
         preload="auto"
-        autoPlay
+        autoPlay={true}
         onEnded={() => {
           if (video.currentIndex == 4) {
             window.scrollTo({
               behavior: "smooth",
               top: document.getElementById("about")?.offsetTop,
             });
-            handleEnded(false);
+            handleEnded(false, true);
             return;
           }
           handleEnded();
