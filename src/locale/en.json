@@ -1,0 +1,24 @@
+{
+  "header.home": "Home",
+  "header.about": "About",
+  "header.games": "Games",
+  "header.presskit": "Press Kit",
+
+  "label.next": "Next Item",
+  "label.prev": "Previous Item",
+
+  "button.more": "More info",
+  "about.content.1": "From an early age, games have been our main form of entertainment. We love them so much that we decided to create our own and share our joy with other gamers.",
+  "about.content.2": "Our products are the result of our experience playing a variety of styles, seeking to bring out the best in our experiences.",
+  "about.content.3": "Our contagious dream became a reality and our own families believed and invested, helping us to produce the Demo of our first game.",
+
+  "inheritance.content": "Welcome to New Age, a company where technology hides intriguing mysteries! Help Kale solve this riddle that begins with the dark death of his uncle Hassam. Major shareholder and creator of ultra-advanced automatons sold by the company, Hassam had no direct heirs and so Kale took over as director in his place. Obstinate and determined, Kale decides to explore the company at night so as not to arouse suspicion. On the first night, he finds a cassette tape with instructions recorded by Hassam on how to restore damaged automatons, how many nights will it take to solve this puzzle? Discover all this and much more through the New Age Company's secret rooms and areas!!!",
+
+  "endless.content": "Endless Chase is a Sci-fi punk with time travel in Real Time RPG bringing a differentiated gameplay experience using 5 core loops strategically distributed in the 4 acts of the Kishotenketsu narrative integrated into the game's Lore.",
+
+  "footer.copy": "All rights reserved. Copyright© Voxels Entertainment",
+  "footer.nav": "Navigation",
+  "footer.follow": "Follow us",
+  "footer.contact": "Contact us",
+  "us": "Who we are"
+}

@@ -47,7 +47,7 @@ export default function LtrRtl({
         display: "flex",
         marginBottom: 100,
         gap: "3rem",
-        height: "70vh",
+        height: "45rem",
         alignItems: "center",
         padding,
       }}

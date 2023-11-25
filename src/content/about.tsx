@@ -1,7 +1,10 @@
 import LtrRtl from "../components/ltr_rtl";
 import voxels from "../assets/logos/VOXELSmarcafinal.svg";
+import { languages } from "../utils/types";
+import en from "../locale/en.json";
+import pt from "../locale/pt.json";
 
-export default function About() {
+export default function About({ locale }: { locale: languages }) {
   return (
     <section
       style={{
@@ -11,23 +14,20 @@ export default function About() {
       }}
       id="about"
     >
-      <h1 style={{ fontSize: "3.5rem" }}>About</h1>
+      <h1 style={{ fontSize: "3.5rem" }}>
+        {locale == "en" ? en["header.about"] : pt["header.about"]}
+      </h1>
       <LtrRtl
         content={[
           <>
             <p className="f_medium">
-              From an early age, games have been our main form of entertainment.
-              We love them so much that we decided to create our own and share
-              our joy with other gamers.
+              {locale == "en" ? en["about.content.1"] : pt["about.content.1"]}
             </p>
             <p className="f_medium">
-              Our products are the result of our experience playing a variety of
-              styles, seeking to bring out the best in our experiences.
+              {locale == "en" ? en["about.content.2"] : pt["about.content.2"]}
             </p>
             <p className="f_medium">
-              Our contagious dream became a reality and our own families
-              believed and invested, helping us to produce the Demo of our first
-              game.
+              {locale == "en" ? en["about.content.3"] : pt["about.content.3"]}
             </p>
           </>,
           <span

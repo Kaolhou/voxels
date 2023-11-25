@@ -2,8 +2,16 @@ import LinkList from "./link_list";
 import img from "../assets/logos/Voxels_logo_img.svg";
 import sign from "../assets/logos/Voxels_logo_sign.svg";
 import ScrollToTop from "./scroll_to_top";
-
-export default function Header({ isTop }: { isTop: boolean }) {
+import { languages } from "../utils/types";
+import en from "../locale/en.json";
+import pt from "../locale/pt.json";
+export default function Header({
+  isTop,
+  locale,
+}: {
+  locale: languages;
+  isTop: boolean;
+}) {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -49,19 +57,19 @@ export default function Header({ isTop }: { isTop: boolean }) {
           className="list-child"
         >
           <LinkList
-            content="Home"
+            content={locale == "en" ? en["header.home"] : pt["header.home"]}
             url="#home"
             className={"f_medium"}
             bold={true}
           />
           <LinkList
-            content="About"
+            content={locale == "en" ? en["header.about"] : pt["header.about"]}
             url="#about"
             className={"f_medium"}
             bold={true}
           />
           <LinkList
-            content="Games"
+            content={locale == "en" ? en["header.games"] : pt["header.games"]}
             url="#games"
             className={"f_medium"}
             bold={true}

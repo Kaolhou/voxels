@@ -6,8 +6,9 @@ import Authors from "../content/authors";
 import SocialMedia from "../components/social_media";
 import VideoSplit from "../components/video_splitted";
 import { useEffect, useState } from "react";
+import { languages } from "../utils/types";
 
-export default function Main() {
+export default function Main({ locale }: { locale: languages }) {
   const [isTop, setIsTop] = useState(true);
 
   useEffect(() => {
@@ -27,12 +28,12 @@ export default function Main() {
   return (
     <main style={{ overflow: "hidden" }}>
       <SocialMedia isTop={isTop} />
-      <Header isTop={isTop} />
+      <Header isTop={isTop} locale={locale} />
       <VideoSplit />
-      <About />
-      <Games />
-      <Authors />
-      <Footer />
+      <About locale={locale} />
+      <Games locale={locale} />
+      <Authors locale={locale} />
+      <Footer locale={locale} />
     </main>
   );
 }

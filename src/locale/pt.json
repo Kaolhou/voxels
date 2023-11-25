@@ -1,0 +1,24 @@
+{
+  "header.home": "Início",
+  "header.about": "Sobre",
+  "header.games": "Jogos",
+  "header.presskit": "Press Kit",
+
+  "label.next": "Próximo Item",
+  "label.prev": "Item Anterior",
+
+  "button.more": "Mais info",
+  "about.content.1": "Desde cedo, os games são nosso principal entretenimento, gostamos tanto que resolvemos criar os nossos próprios e compartilhar nossa alegria com outros gamers.",
+  "about.content.2": "Nossos produtos são fruto de nossa vivência jogando uma variedade de estilos, buscando trazer o melhor de nossas experiências.",
+  "about.content.3": "O nosso sonho contagiante transformou-se em realidade e nossas próprias famílias acreditaram e investiram, nos ajudando na produção da Demo do nosso primeiro jogo.",
+
+  "inheritance.content": "Bem-vindo à New Age, uma empresa onde a tecnologia se esconde mistérios intrigantes! Ajude Kale a resolver esse enigma que começa com a morte sombria de seu tio Hassam. Acionista majoritário e criador dos autômatos ultraavançados vendidos pela empresa, Hassam não tinha herdeiros diretos e então Kale assumiu como diretor em seu lugar. Obstinado e determinado, Kale decide explore a empresa à noite para não levantar suspeitas. Sobre na primeira noite, ele encontra uma fita cassete com instruções gravado por Hassam sobre como restaurar autômatos danificados, como quantas noites serão necessárias para resolver esse quebra-cabeça? Descubra tudo isso e muito mais através das salas secretas da New Age Company e áreas!!!",
+
+  "endless.content": "Endless Chase é um RPG Sci-fi punk com viagem no tempo em Real Time trazendo uma experiência de gameplay diferenciada utilizando 5 core loops estrategicamente distribuídos nos 4 atos da narrativa Kishotenketsu integrada ao Lore do jogo",
+
+  "footer.copy": "Todos os direitos reservados. Copyright© Voxels Entertainment",
+  "footer.nav": "Navegação",
+  "footer.follow": "Nos siga",
+  "footer.contact": "Entre em contato",
+  "us": "Quem somos nós"
+}

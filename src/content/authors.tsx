@@ -2,7 +2,11 @@ import Card from "../components/card";
 import ghoff from "../assets/persons/hoffmann.jpg";
 import rafarossi from "../assets/persons/rafa.jpg";
 import flavio from "../assets/persons/flavio.jpg";
-export default function Authors() {
+import en from "../locale/en.json";
+import pt from "../locale/pt.json";
+import { languages } from "../utils/types";
+
+export default function Authors({ locale }: { locale: languages }) {
   return (
     <section
       style={{
@@ -10,7 +14,9 @@ export default function Authors() {
         maxWidth: "70vw",
       }}
     >
-      <h1 style={{ fontSize: "3.5rem" }}>Who we are</h1>
+      <h1 style={{ fontSize: "3.5rem" }}>
+        {locale == "en" ? en["us"] : pt["us"]}
+      </h1>
       <div
         style={{
           display: "flex",

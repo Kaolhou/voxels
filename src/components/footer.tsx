@@ -1,7 +1,10 @@
+import { languages } from "../utils/types";
 import CopyToClipboard from "./copy_to_clipboard";
 import LinkList from "./link_list";
+import en from "../locale/en.json";
+import pt from "../locale/pt.json";
 
-export default function Footer() {
+export default function Footer({ locale }: { locale: languages }) {
   return (
     <footer
       style={{
@@ -25,36 +28,38 @@ export default function Footer() {
         }}
       >
         <article>
-          <h2>Navigation</h2>
+          <h2>{locale == "en" ? en["footer.nav"] : pt["footer.nav"]}</h2>
           <ul>
             <LinkList
-              content="Home"
+              content={locale == "en" ? en["header.home"] : pt["header.home"]}
               url="#home"
               className={"f_medium"}
               style={{ lineHeight: "3rem" }}
             />
             <LinkList
-              content="About"
+              content={locale == "en" ? en["header.about"] : pt["header.about"]}
               url="#about"
               className={"f_medium"}
               style={{ lineHeight: "3rem" }}
             />
             <LinkList
-              content="Games"
+              content={locale == "en" ? en["header.games"] : pt["header.games"]}
               url="#games"
               className={"f_medium"}
               style={{ lineHeight: "3rem" }}
             />
             <LinkList
-              content="PressKit"
-              url="#games"
+              content={
+                locale == "en" ? en["header.presskit"] : pt["header.presskit"]
+              }
+              url="https://impress.games/press-kit/voxels-entertainment/endless-chase"
               className={"f_medium"}
               style={{ lineHeight: "3rem" }}
             />
           </ul>
         </article>
         <article>
-          <h2>Follow us</h2>
+          <h2>{locale == "en" ? en["footer.follow"] : pt["footer.follow"]}</h2>
           <ul>
             <LinkList
               content="Linkedin"
@@ -73,7 +78,9 @@ export default function Footer() {
           </ul>
         </article>
         <article>
-          <h2>Contact us</h2>
+          <h2>
+            {locale == "en" ? en["footer.contact"] : pt["footer.contact"]}
+          </h2>
           <ul>
             <CopyToClipboard
               isLi={true}
@@ -84,7 +91,7 @@ export default function Footer() {
         </article>
       </section>
       <section style={{ textAlign: "center" }}>
-        <span>All rights reserved. Copyright&copy; Voxels Entertainment</span>
+        <span>{locale == "en" ? en["footer.copy"] : pt["footer.copy"]}</span>
       </section>
     </footer>
   );

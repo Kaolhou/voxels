@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import ButtonLogo from "../components/button_logo";
 import catarse from "../assets/logos/catarse.svg";
+import { languages } from "../utils/types";
 
-export default function Shadows() {
+export default function Shadows({ locale }: { locale: languages }) {
   useEffect(() => {
     document.title = "Inheritance of Shadows";
   }, []);
