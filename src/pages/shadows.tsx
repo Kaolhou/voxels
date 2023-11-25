@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import ButtonLogo from "../components/button_logo";
 import catarse from "../assets/logos/catarse.svg";
 import { languages } from "../utils/types";
-
+import en from "../locale/en.json";
+import pt from "../locale/pt.json";
 export default function Shadows({ locale }: { locale: languages }) {
   useEffect(() => {
     document.title = "Inheritance of Shadows";
@@ -31,7 +32,10 @@ export default function Shadows({ locale }: { locale: languages }) {
         allow="autoplay; encrypted-media;"
         allowFullScreen
       ></iframe>
-      <ButtonLogo text="Become a backer" logo={catarse} />
+      <ButtonLogo
+        text={locale == "en" ? en["backer"] : pt["backer"]}
+        logo={catarse}
+      />
     </main>
   );
 }
