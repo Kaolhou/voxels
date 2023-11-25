@@ -14,7 +14,7 @@ export default function Games() {
       style={{
         paddingTop: "5rem",
         margin: "auto",
-        maxWidth: "70vw",
+        maxWidth: "78vw",
       }}
       id="games"
     >
