@@ -177,6 +177,12 @@ h1 {
   border-left: 0.2rem solid #0ea5e9;
   border-top: 0.2rem solid #0ea5e9;
 }
+.slide-container {
+  display: flex !important;
+  justify-content: center; /* Alinha no centro horizontalmente */
+  align-items: center; /* Alinha no centro verticalmente */
+  height: 100%;
+}
 .button_to_top:active {
   border-top: 0.2rem solid #0369a1;
   border-left: 0.2rem solid #0369a1;

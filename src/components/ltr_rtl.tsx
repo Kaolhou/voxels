@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 export default function LtrRtl({
   content,
   side,
+  padding = "0",
 }: {
   content: [React.ReactElement, React.ReactElement];
   side: "ltr" | "rtl";
+  padding?: string;
 }) {
   const [dimensions, setDimensions] = useState<{
     width: number;
@@ -45,6 +47,9 @@ export default function LtrRtl({
         display: "flex",
         marginBottom: 100,
         gap: "3rem",
+        height: "70vh",
+        alignItems: "center",
+        padding,
       }}
     >
       {content.map((component, index) => (
