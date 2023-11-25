@@ -32,6 +32,7 @@ export default function Games() {
       >
         <article className="slide-container">
           <LtrRtl
+            padding="0 20px"
             content={[
               <div data-aos="slide-up">
                 <h2 className="f_larger">Endless Chase</h2>
